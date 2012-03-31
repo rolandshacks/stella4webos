@@ -102,7 +102,6 @@ bool FrameBufferGL::loadFuncs(GLFunctionality functionality)
         OGL_INIT(Hint,void,glHint,(GLenum, GLenum));
         OGL_INIT(ShadeModel,void,glShadeModel,(GLenum));
         OGL_INIT(MatrixMode,void,glMatrixMode,(GLenum));
-        OGL_INIT(Ortho,void,glOrtho,(GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble));
         OGL_INIT(Viewport,void,glViewport,(GLint, GLint, GLsizei, GLsizei));
         OGL_INIT(LoadIdentity,void,glLoadIdentity,(void));
         OGL_INIT(EnableClientState,void,glEnableClientState,(GLenum));
@@ -123,6 +122,12 @@ bool FrameBufferGL::loadFuncs(GLFunctionality functionality)
         OGL_INIT(GetError,GLenum,glGetError,(void));
         OGL_INIT(Color4f,void,glColor4f,(GLfloat,GLfloat,GLfloat,GLfloat));
         OGL_INIT(BlendFunc,void,glBlendFunc,(GLenum,GLenum));
+
+        #ifdef HAVE_GLES
+            OGL_INIT(Ortho,void,glOrthof,(GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat));
+        #else
+            OGL_INIT(Ortho,void,glOrtho,(GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble));
+        #endif
         break; // kGL_Full
 
       case kGL_VBO:

@@ -268,12 +268,12 @@ void ScrollBarWidget::drawWidget(bool hilite)
 
   // Up arrow
   s.frameRect(_x, _y, _w, UP_DOWN_BOX_HEIGHT, kColor);
-  s.drawBitmap(up_arrow, _x+3, _y+5, isSinglePage ? kColor :
+  s.drawBitmap(up_arrow, _x+(kScrollBarWidth-8)/2, _y+5, isSinglePage ? kColor :
                (hilite && _part == kUpArrowPart) ? kScrollColorHi : kScrollColor, 8);
 
   // Down arrow
   s.frameRect(_x, bottomY - UP_DOWN_BOX_HEIGHT, _w, UP_DOWN_BOX_HEIGHT, kColor);
-  s.drawBitmap(down_arrow, _x+3, bottomY - UP_DOWN_BOX_HEIGHT + 5, isSinglePage ? kColor :
+  s.drawBitmap(down_arrow, _x+(kScrollBarWidth-8)/2, bottomY - UP_DOWN_BOX_HEIGHT + 5, isSinglePage ? kColor :
                (hilite && _part == kDownArrowPart) ? kScrollColorHi : kScrollColor, 8);
 
   // Slider

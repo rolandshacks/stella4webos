@@ -20,6 +20,10 @@
 #include <SDL.h>
 #include <cstdlib>
 
+#ifdef WEBOS
+#include <PDL.h>
+#endif
+
 #include "bspf.hxx"
 #include "Console.hxx"
 #include "Event.hxx"
@@ -102,6 +106,11 @@ int main(int argc, char* argv[])
 #else
   #error Unsupported platform!
 #endif
+
+  #ifdef WEBOS
+    PDL_Init(0);
+    atexit(PDL_Quit);
+  #endif
 
   theOSystem->settings().loadConfig();
   theOSystem->logMessage("Loading config options ...\n", 2);

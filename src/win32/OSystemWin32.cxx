@@ -81,7 +81,10 @@ OSystemWin32::OSystemWin32()
       basedir = ".";  // otherwise, default to current directory
   }
 
+  basedir = "C:\\temp\\stella";
+
   setBaseDir(basedir);
+
   setConfigFile(basedir + "\\stella.ini");
 }
 

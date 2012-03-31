@@ -83,6 +83,15 @@ using namespace std;
   #define BSPF_PATH_SEPARATOR  "/"
 #endif
 
+#ifdef WEBOS
+  #ifndef APIENTRY
+    #define APIENTRY /* */
+  #endif
+  #ifndef ZEXTERN
+    #define ZEXTERN /* */
+  #endif
+#endif
+
 // I wish Windows had a complete POSIX layer
 #if defined BSPF_WIN32 && !defined __GNUG__
   #define BSPF_strcasecmp stricmp

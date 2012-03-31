@@ -23,7 +23,13 @@
 #ifdef DISPLAY_OPENGL
 
 #include <SDL.h>
+
+#ifdef HAVE_GLES
+#include <GLES/gl.h>
+#else
 #include <SDL_opengl.h>
+#endif
+
 #include <SDL_syswm.h>
 
 class OSystem;
@@ -237,7 +243,6 @@ class FrameBufferGL : public FrameBuffer
       OGL_DECLARE(Hint,void,glHint,(GLenum, GLenum));
       OGL_DECLARE(ShadeModel,void,glShadeModel,(GLenum));
       OGL_DECLARE(MatrixMode,void,glMatrixMode,(GLenum));
-      OGL_DECLARE(Ortho,void,glOrtho,(GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble));
       OGL_DECLARE(Viewport,void,glViewport,(GLint, GLint, GLsizei, GLsizei));
       OGL_DECLARE(LoadIdentity,void,glLoadIdentity,(void));
       OGL_DECLARE(EnableClientState,void,glEnableClientState,(GLenum));
@@ -262,6 +267,13 @@ class FrameBufferGL : public FrameBuffer
       OGL_DECLARE(BindBuffer,void,glBindBuffer,(GLenum,GLuint));
       OGL_DECLARE(BufferData,void,glBufferData,(GLenum,GLsizei,const void*,GLenum));
       OGL_DECLARE(DeleteBuffers,void,glDeleteBuffers,(GLsizei, const GLuint*));
+
+#ifdef HAVE_GLES
+      OGL_DECLARE(Ortho,void,glOrthof,(GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat));
+#else
+      OGL_DECLARE(Ortho,void,glOrtho,(GLdouble, GLdouble, GLdouble, GLdouble, GLdouble, GLdouble));
+#endif
+
     } GLpointers;
     GLpointers p_gl;
 };

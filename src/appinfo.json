@@ -1,0 +1,10 @@
+{
+	"title": "stella",
+	"type": "pdk",
+	"main": "stella",
+    "icon": "logo.png",
+	"id": "com.emu.app.stella",
+	"version": "0.0.1",
+	"vendor": "STELLA",
+    "requiredMemory": 15
+}

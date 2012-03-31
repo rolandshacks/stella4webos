@@ -40,8 +40,14 @@
 OSystemUNIX::OSystemUNIX()
   : OSystem()
 {
-  setBaseDir("~/.stella");
-  setConfigFile("~/.stella/stellarc");
+  #ifdef WEBOS
+      setBaseDir("/media/internal/stella");
+      chdir("/media/internal/stella");
+      setConfigFile("/media/internal/stella/stellarc");
+  #else
+    setBaseDir("~/.stella");
+    setConfigFile("~/.stella/stellarc");
+  #endif
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

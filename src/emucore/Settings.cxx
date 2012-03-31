@@ -127,6 +127,24 @@ Settings::Settings(OSystem* osystem)
 
   // Thumb ARM emulation options
   setInternal("thumb.trapfatal", "true");
+
+//#ifdef WEBOS
+  setInternal("video", "gl");
+  setInternal("launcherres", "1024x768");
+  setInternal("launcherfont", "large");
+  setInternal("tia_filter", "zoom4x");
+  setInternal("freq", "44100");
+  setInternal("tiafreq", "44100");
+  setInternal("romdir", "");
+  setInternal("statedir", "");
+  setInternal("cheatfile", "");
+  setInternal("palettefile", "");
+  setInternal("propsfile", "");
+  setInternal("eepromdir", "");
+  setInternal("cfgdir", "");
+  setInternal("grabmouse", "false");
+//#endif
+
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
