@@ -1,0 +1,987 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="emucore">
+      <UniqueIdentifier>{8bb3a449-bfeb-425b-bcfe-807d00b98670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{04d5d76e-928d-419f-adb6-148071e1c37c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{4b6c2620-4748-4d3b-b8b7-d046b9bb4021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{08fff908-bb44-4677-82ec-c4426abe7ea5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{609bd505-961a-458e-9719-69b9d9e36abc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libpng">
+      <UniqueIdentifier>{5c659517-09d9-4ae1-9bfc-77ac79d65f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{cc831206-9cbf-46a0-8254-0177fafa96bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\emucore\AtariVox.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Booster.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Cart.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Cart2K.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Cart3E.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Cart3F.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Cart4A50.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Cart4K.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Cart0840.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartAR.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartCM.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartCV.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartDPC.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartDPCPlus.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartE0.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartE7.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartEF.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartEFSC.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartF0.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartF4.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartF4SC.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartF6.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartF6SC.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartF8.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartF8SC.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartFA.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartFA2.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartFE.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartMC.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartSB.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartUA.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CartX07.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\CompuMate.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Console.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Control.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Driving.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\EventHandler.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\FrameBuffer.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\FSNode.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Genesis.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Joystick.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Keyboard.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\KidVid.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\M6502.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\M6532.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\MD5.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\MediaFactory.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\MindLink.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\MT24LC256.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\NullDev.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\OSystem.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Paddles.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Props.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\PropsSet.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Random.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\SaveKey.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Serializer.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Settings.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\StateManager.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Switches.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\System.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\Thumbulator.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\TIA.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\TIASnd.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\TIATables.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\TrackBall.cxx">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emucore\unzip.c">
+      <Filter>emucore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\FBSurfaceGL.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\FBSurfaceTIA.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\FrameBufferGL.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\FrameBufferSoft.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\mainSDL.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\MouseControl.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\PNGLibrary.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\RectList.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Snapshot.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\SoundNull.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\SoundSDL.cxx">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\AboutDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\AudioDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\BrowserDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\CheckListWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\ComboDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\CommandDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\CommandMenu.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\ContextMenu.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\Dialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\DialogContainer.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\EditableWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\EditTextWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\EventMappingWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\FileSnapDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\Font.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GameInfoDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GameList.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GlobalPropsDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\HelpDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\InputDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\InputTextDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\Launcher.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\LauncherDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\LauncherFilterDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\ListWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\LoggerDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\Menu.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\MessageBox.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\OptionsDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\PopUpWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\ProgressDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\RomAuditDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\RomInfoWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\ScrollBarWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\StringListWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\TabWidget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\UIDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\VideoDialog.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\Widget.cxx">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\FSNodeWin32.cxx">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\OSystemWin32.cxx">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\SDL_win32_main.c">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\SerialPortWin32.cxx">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32\SettingsWin32.cxx">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\png.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngerror.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngget.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngmem.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngpread.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngread.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngrio.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngrtran.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngrutil.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngset.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngtrans.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngwio.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngwrite.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngwtran.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libpng\pngwutil.c">
+      <Filter>libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\compress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\gzclose.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\gzlib.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\gzread.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\gzwrite.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\infback.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unix\FSNodePOSIX.cxx">
+      <Filter>unix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unix\OSystemUNIX.cxx">
+      <Filter>unix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unix\SerialPortUNIX.cxx">
+      <Filter>unix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unix\SettingsUNIX.cxx">
+      <Filter>unix</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\emucore\AtariVox.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Booster.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Cart.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Cart2K.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Cart3E.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Cart3F.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Cart4A50.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Cart4K.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Cart0840.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartAR.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartCM.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartCV.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartDPC.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartDPCPlus.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartE0.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartE7.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartEF.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartEFSC.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartF0.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartF4.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartF4SC.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartF6.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartF6SC.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartF8.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartF8SC.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartFA.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartFA2.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartFE.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartMC.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartSB.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartUA.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CartX07.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\CompuMate.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Console.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Control.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\DefProps.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Device.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Driving.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Event.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\EventHandler.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\FrameBuffer.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\FSNode.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Genesis.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Joystick.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Keyboard.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\KidVid.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\M6502.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\M6532.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\MD5.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\MediaFactory.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\MindLink.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\MT24LC256.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\NullDev.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\OSystem.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Paddles.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Props.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\PropsSet.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Random.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\SaveKey.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Serializable.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Serializer.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\SerialPort.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Settings.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Sound.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\StateManager.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Switches.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\System.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\Thumbulator.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\TIA.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\TIASnd.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\TIATables.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\TrackBall.hxx">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emucore\unzip.h">
+      <Filter>emucore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Array.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\bspf.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\FBSurfaceGL.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\FBSurfaceTIA.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\FrameBufferGL.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\FrameBufferSoft.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\MouseControl.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\PNGLibrary.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\RectList.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\SharedPtr.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Snapshot.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\SoundNull.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\SoundSDL.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Stack.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\StellaKeys.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\StringList.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\StringParser.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Version.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\AboutDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\AudioDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\BrowserDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\CheckListWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ComboDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Command.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\CommandDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\CommandMenu.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ConsoleFont.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ContextMenu.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Dialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\DialogContainer.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\EditableWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\EditTextWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\EventMappingWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\FileSnapDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Font.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GameInfoDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GameList.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GlobalPropsDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GuiObject.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\HelpDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\InputDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\InputTextDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Launcher.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\LauncherDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\LauncherFilterDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ListWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\LoggerDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Menu.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\MessageBox.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\OptionsDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\PopUpWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ProgressDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Rect.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\RomAuditDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\RomInfoWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ScrollBarWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\StellaFont.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\StellaLargeFont.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\StellaMediumFont.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\StringListWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\TabWidget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\UIDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\VideoDialog.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Widget.hxx">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\HomeFinder.hxx">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\OSystemWin32.hxx">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\resource.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\SerialPortWin32.hxx">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32\SettingsWin32.hxx">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libpng\png.h">
+      <Filter>libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libpng\pngconf.h">
+      <Filter>libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libpng\pngdebug.h">
+      <Filter>libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libpng\pnginfo.h">
+      <Filter>libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libpng\pnglibconf.h">
+      <Filter>libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libpng\pngpriv.h">
+      <Filter>libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libpng\pngstruct.h">
+      <Filter>libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\crc32.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\gzguts.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\inflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unix\OSystemUNIX.hxx">
+      <Filter>unix</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unix\SerialPortUNIX.hxx">
+      <Filter>unix</Filter>
+    </ClInclude>
+    <ClInclude Include="src\unix\SettingsUNIX.hxx">
+      <Filter>unix</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
