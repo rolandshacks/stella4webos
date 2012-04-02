@@ -84,6 +84,9 @@ using namespace std;
 #endif
 
 #ifdef WEBOS
+  #ifndef BSPF_PATH_SEPARATOR
+    #define BSPF_PATH_SEPARATOR  "/"
+  #endif
   #ifndef APIENTRY
     #define APIENTRY /* */
   #endif

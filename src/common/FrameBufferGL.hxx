@@ -189,6 +189,11 @@ class FrameBufferGL : public FrameBuffer
     */
     void postFrameUpdate();
 
+    /**
+      This method is called to draw an overlay on top of the emulation output.
+    */
+    void drawOverlay();
+
   private:
     enum GLFunctionality {
       kGL_BASIC, kGL_VBO, kGL_FBO

@@ -603,11 +603,20 @@ void EventHandler::poll(uInt64 time)
         // Determine which mode we're in, then send the event to the appropriate place
         if(myState == S_EMULATE)
         {
-          if(!mySkipMouseMotion)
-          {
-            myEvent.set(Event::MouseAxisXValue, event.motion.xrel);
-            myEvent.set(Event::MouseAxisYValue, event.motion.yrel);
-          }
+          updateVirtualJoystick();
+
+          /*
+          #ifdef WEBOS
+            updateVirtualJoystick();
+          #else
+            if(!mySkipMouseMotion)
+            {
+              myEvent.set(Event::MouseAxisXValue, event.motion.xrel);
+              myEvent.set(Event::MouseAxisYValue, event.motion.yrel);
+            }
+          #endif
+          */
+
           mySkipMouseMotion = false;
         }
         else if(myOverlay)
@@ -623,10 +632,14 @@ void EventHandler::poll(uInt64 time)
         // Determine which mode we're in, then send the event to the appropriate place
         if(myState == S_EMULATE)
         {
+          // @TODO #ifdef WEBOS
+          updateVirtualJoystick();
+
+          /*
           switch(event.button.button)
           {
             case SDL_BUTTON_LEFT:
-              myEvent.set(Event::MouseButtonLeftValue, state);
+                myEvent.set(Event::MouseButtonLeftValue, state);
               break;
             case SDL_BUTTON_RIGHT:
               myEvent.set(Event::MouseButtonRightValue, state);
@@ -634,6 +647,7 @@ void EventHandler::poll(uInt64 time)
             default:
               break;
           }
+          */
         }
         else if(myOverlay)
         {
@@ -2717,4 +2731,137 @@ string EventHandler::StellaJoystick::about() const
         << numHats    << " hats";
 
   return buf.str();
+}
+
+int EventHandler::getVirtualStickState()
+{
+	int mouseX = 0;
+	int mouseY = 0;
+	int mouseButtons = SDL_GetMouseState(&mouseX, &mouseY);
+
+    int mouseButtons2 = 0;
+    int mouseX2 = 0;
+    int mouseY2 = 0;
+
+    #ifdef WEBOS
+        mouseButtons2 = SDL_GetMultiMouseState(1, &mouseX2, &mouseY2);
+    #endif
+
+    int windowWidth = 1024;
+    int windowHeight = 768;
+
+    int leftArea = windowWidth/2;
+    int topArea = 40;
+
+    bool mouseSwapped = false;
+
+    if (mouseButtons == 0 && mouseButtons2 == 0)
+    {
+        // no input
+        return 0x0;
+    }
+
+    if (mouseButtons != 0 && mouseButtons2 != 0)
+    {
+        if (mouseX > mouseX2)
+        {
+            swap(mouseX, mouseX2);
+            swap(mouseY, mouseY2);
+            swap(mouseButtons, mouseButtons2);
+            mouseSwapped = true;
+        }
+
+        if (mouseX2 <= leftArea)
+        {
+            // dual input on left side
+            mouseX2 = mouseY2 = mouseButtons2 = 0;
+        }
+
+        if (mouseX > leftArea)
+        {
+            // dual input on right side
+            mouseX = mouseY = mouseButtons = 0;
+        }
+    }
+    else if (mouseX > leftArea && mouseY > topArea)
+    {
+        mouseX2 = mouseX; mouseX = 0;
+        mouseY2 = mouseY; mouseY = 0;
+        mouseButtons2 = mouseButtons; mouseButtons = 0;
+        mouseSwapped = true;
+    }
+
+    /*
+	printf("LEFT: %d %d %d  / RIGHT: %d %d %d\n", mouseX, mouseY, mouseButtons,
+	                                              mouseX2, mouseY2, mouseButtons2);
+    */
+
+    int stick = 0x0;
+
+    if (!mouseSwapped && mouseY < topArea && (mouseButtons & 0x1) == 1 && (mouseButtons2 & 0x1) == 0)
+    {
+        if (mouseX < 40)
+        {
+            stick |= 0x20;      // function 1 : select
+        }
+        else if (mouseX >= windowWidth - 40)
+        {
+            stick |= 0x40;      // function 2 : reset
+        }
+        else if (mouseX >= leftArea - 300 && mouseX <= leftArea + 300)
+        {
+            stick |= 0x80;      // function 3 : launcher mode
+        }
+    }
+    else
+    {
+        if (mouseButtons & 0x1)
+        {
+            SDL_Rect rectDeadZone;
+
+            int centerX = 90;
+            int centerY = windowHeight / 2 - 20;
+
+            int deadZoneWidth = 40;
+            int deadZoneHeight = 40;
+            rectDeadZone.x = centerX - deadZoneWidth / 2;
+            rectDeadZone.y = centerY - deadZoneHeight / 2;
+            rectDeadZone.w = deadZoneWidth;
+            rectDeadZone.h = deadZoneHeight;
+
+            if (mouseX <  rectDeadZone.x)                    stick |= 0x1; // Left
+            if (mouseX >= rectDeadZone.x+rectDeadZone.w)     stick |= 0x2; // Right
+            if (mouseY <  rectDeadZone.y)                    stick |= 0x4; // Up
+            if (mouseY >= rectDeadZone.y+rectDeadZone.h)     stick |= 0x8; // Down
+        }
+
+        if (mouseButtons2 & 0x1)
+        {
+            stick |= 0x10; // Button
+        }
+    }
+
+    return stick;
+}
+
+void EventHandler::updateVirtualJoystick()
+{
+    int state = getVirtualStickState();
+
+    //printf("STICK: 0x%02x\n", state);
+
+    myEvent.set(Event::JoystickZeroLeft,  (0 != (state & 0x1)) ? 1 : 0);
+    myEvent.set(Event::JoystickZeroRight, (0 != (state & 0x2)) ? 1 : 0);
+    myEvent.set(Event::JoystickZeroUp,    (0 != (state & 0x4)) ? 1 : 0);
+    myEvent.set(Event::JoystickZeroDown,  (0 != (state & 0x8)) ? 1 : 0);
+    myEvent.set(Event::JoystickZeroFire,  (0 != (state & 0x10)) ? 1 : 0);
+
+    myEvent.set(Event::ConsoleSelect,     (0 != (state & 0x20)) ? 1 : 0);
+    myEvent.set(Event::ConsoleReset,      (0 != (state & 0x40)) ? 1 : 0);
+
+    if (0 != (state & 0x80))
+    {
+        handleEvent(Event::LauncherMode, S_EMULATE);
+    }
+
 }

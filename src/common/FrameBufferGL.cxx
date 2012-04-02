@@ -419,6 +419,15 @@ void FrameBufferGL::scanline(uInt32 row, uInt8* data) const
   p_gl.ReadPixels(image.x(), row, image.width(), 1, GL_RGB, GL_UNSIGNED_BYTE, data);
 }
 
+void FrameBufferGL::drawOverlay()
+{
+    // @TODO WEBOS
+    //p_gl
+
+    //printf("DRAW OVERLAY\n");
+
+}
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 bool FrameBufferGL::myLibraryLoaded = false;
 

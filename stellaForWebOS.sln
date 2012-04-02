@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stellaForWebOS", "stellaForWebOS.vcxproj", "{9B07A2DD-401A-4149-2CCD-9C8C31834059}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stellaForWebOS", "stellaForWebOS.vcxproj", "{9E6A1819-9288-A93E-5E51-73C137516C05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B07A2DD-401A-4149-2CCD-9C8C31834059}.Debug|Win32.ActiveCfg = Debug|Win32
-		{9B07A2DD-401A-4149-2CCD-9C8C31834059}.Debug|Win32.Build.0 = Debug|Win32
-		{9B07A2DD-401A-4149-2CCD-9C8C31834059}.Release|Win32.ActiveCfg = Release|Win32
-		{9B07A2DD-401A-4149-2CCD-9C8C31834059}.Release|Win32.Build.0 = Release|Win32
+		{9E6A1819-9288-A93E-5E51-73C137516C05}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9E6A1819-9288-A93E-5E51-73C137516C05}.Debug|Win32.Build.0 = Debug|Win32
+		{9E6A1819-9288-A93E-5E51-73C137516C05}.Release|Win32.ActiveCfg = Release|Win32
+		{9E6A1819-9288-A93E-5E51-73C137516C05}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -212,6 +212,9 @@ void FrameBuffer::update()
       // And update the screen
       drawTIA(myRedrawEntireFrame);
 
+      /// Draw overlay
+      drawOverlay();
+
       // Show frame statistics
       if(myStatsMsg.enabled)
       {
@@ -229,6 +232,7 @@ void FrameBuffer::update()
         myStatsMsg.surface->setPos(myImageRect.x() + 1, myImageRect.y() + 1);
         myStatsMsg.surface->update();
       }
+
       break;  // S_EMULATE
     }
 
@@ -747,17 +751,22 @@ void FrameBuffer::setCursorState()
   // and don't show the cursor during emulation
   bool emulation =
       myOSystem->eventHandler().state() == EventHandler::S_EMULATE;
+
   grabMouse(fullScreen() ||
     (emulation && myOSystem->settings().getBool("grabmouse")));
+
   showCursor(!emulation);
+  //showCursor(true);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 void FrameBuffer::toggleGrabMouse()
 {
-  bool state = myOSystem->settings().getBool("grabmouse");
-  myOSystem->settings().setBool("grabmouse", !state);
-  setCursorState();
+  #ifndef WEBOS
+    bool state = myOSystem->settings().getBool("grabmouse");
+    myOSystem->settings().setBool("grabmouse", !state);
+    setCursorState();
+  #endif
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

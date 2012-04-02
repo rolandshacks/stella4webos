@@ -5,7 +5,7 @@ Ported by Roland Schabenberger
 
 --
 
-This is a port of the release 3.6 of Stella for webOS.Stella is a
+This is a port of the release 3.6 of Stella for webOS. Stella is a
 multi-platform Atari 2600 VCS emulator which allows you to play all of
 your favourite Atari 2600 games on your PC. You'll find the Stella
 Users Manual in the docs subdirectory.

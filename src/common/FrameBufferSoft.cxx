@@ -520,6 +520,10 @@ void FrameBufferSoft::scanline(uInt32 row, uInt8* data) const
   SDL_UnlockSurface(myScreen);
 }
 
+void FrameBufferSoft::drawOverlay()
+{
+    /* NOT IMPLEMENTED, YET */
+}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //  FBSurfaceSoft implementation follows ...

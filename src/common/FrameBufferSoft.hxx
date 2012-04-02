@@ -145,6 +145,11 @@ class FrameBufferSoft : public FrameBuffer
     void postFrameUpdate();
 
     /**
+      This method is called to draw an overlay on top of the emulation output.
+    */
+    void drawOverlay();
+
+    /**
       This method is called to provide information about the FrameBuffer.
     */
     string about() const;

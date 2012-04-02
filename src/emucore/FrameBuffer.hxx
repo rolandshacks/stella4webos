@@ -425,6 +425,11 @@ class FrameBuffer
     virtual string about() const = 0;
 
     /**
+      This method is called to draw an overlay on top of the emulation output.
+    */
+    virtual void drawOverlay() = 0;
+
+    /**
       Issues a 'free' and 'reload' instruction to all surfaces that the
       framebuffer knows about.
     */

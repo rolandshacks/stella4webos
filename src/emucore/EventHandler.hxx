@@ -347,6 +347,12 @@ class EventHandler
     void setMouseAsPaddle(int paddle, const string& message);
 
     /**
+      Process touch input;
+    */
+    int getVirtualStickState();
+    void updateVirtualJoystick();
+
+    /**
       Tests if a given event should use continuous/analog values.
 
       @param event  The event to test for analog processing
